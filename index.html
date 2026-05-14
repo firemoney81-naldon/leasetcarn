@@ -1,23 +1,980 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "K5 자동차 리스 및 장기렌트카 전문 서비스",
+      "description": "2026년 최신 K5 모델에 대한 자동차 리스 및 장기렌트카 서비스를 제공합니다. 합리적인 유지비, 투명한 가격, 맞춤형 견적, 다양한 프로모션 및 할인 혜택을 통해 고객 만족을 최우선으로 합니다. AI 기반 분석을 통해 최적의 계약 조건을 제안합니다.",
+      "provider": {
+        "@type": "Organization",
+        "name": "스마트카 파트너스",
+        "url": "https://yourdomain.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+82-2-1234-5678",
+          "contactType": "고객 서비스 및 견적 문의",
+          "areaServed": ["대한민국 전체", "서울", "경기", "인천", "부산", "대구", "인천", "광주", "대전", "울산", "세종", "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"]
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "대한민국"
+      },
+      "keywords": "K5 유지비, K5 자동차리스, K5 장기렌트카, K5 리스, K5 렌트카, K5 가격, K5 견적, K5 비용, K5 프로모션, K5 할인, K5 장점, K5 단점, K5 비교, K5 추천, K5 신차, 개인사업자 리스, 법인 리스, 중형 세단",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "K5 리스 및 장기렌트카 상품",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Vehicle",
+              "name": "K5 DL3 (2026년형)",
+              "description": "세련된 디자인과 강력한 성능의 K5 최신 모델. 리스 및 장기렌트로 부담없이 이용하세요.",
+              "brand": {
+                "@type": "Brand",
+                "name": "기아"
+              },
+              "model": "K5 DL3",
+              "vehicleEngine": {
+                  "@type": "EngineSpecification",
+                  "name": "1.6 터보 가솔린"
+              },
+              "vehicleConfiguration": "프레스티지 트림 기준"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "580000",
+              "priceCurrency": "KRW",
+              "valueAddedTaxStatus": "TAX_EXCLUDED",
+              "description": "1.6 터보 프레스티지, 36개월 약정 주행거리 20,000km/년 기준 예상 월 납입금. (보증금 조건에 따라 변동)"
+            },
+            "areaServed": { "@type": "Country", "name": "대한민국" },
+            "category": "자동차 리스"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Vehicle",
+              "name": "K5 MX4 (2026년형)",
+              "description": "스포티한 감성과 최첨단 기술이 집약된 K5 MX4 모델. 합리적인 장기렌트카로 만나보세요.",
+              "brand": {
+                "@type": "Brand",
+                "name": "기아"
+              },
+              "model": "K5 MX4",
+              "vehicleEngine": {
+                  "@type": "EngineSpecification",
+                  "name": "2.0 가솔린"
+              },
+              "vehicleConfiguration": "노블레스 트림 기준"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "550000",
+              "priceCurrency": "KRW",
+              "valueAddedTaxStatus": "TAX_EXCLUDED",
+              "description": "2.0 가솔린 노블레스, 48개월 약정 주행거리 20,000km/년 기준 예상 월 납입금. (보증금 조건에 따라 변동)"
+            },
+            "areaServed": { "@type": "Country", "name": "대한민국" },
+            "category": "장기렌트카"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Vehicle",
+              "name": "K5 하이브리드 (2026년형)",
+              "description": "뛰어난 연비 효율을 자랑하는 K5 하이브리드. 친환경 운전을 위한 최적의 선택입니다.",
+              "brand": {
+                "@type": "Brand",
+                "name": "기아"
+              },
+              "model": "K5 하이브리드",
+              "vehicleEngine": {
+                  "@type": "EngineSpecification",
+                  "name": "1.6 터보 하이브리드"
+              },
+              "vehicleConfiguration": "프레스티지 트림 기준"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "620000",
+              "priceCurrency": "KRW",
+              "valueAddedTaxStatus": "TAX_EXCLUDED",
+              "description": "1.6 터보 하이브리드 프레스티지, 36개월 약정 주행거리 20,000km/년 기준 예상 월 납입금. (보증금 조건에 따라 변동)"
+            },
+            "areaServed": { "@type": "Country", "name": "대한민국" },
+            "category": "자동차 리스"
+          }
+        ]
+      },
+       "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://yourdomain.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <style>
+      /* 디자인: 다채롭고 부드러운 색감, 명확한 시각적 계층 구조, 가독성 향상 */
+      :root {
+        --primary-color: #0077CC; /* 부드러운 네이비 */
+        --secondary-color: #4CAF50; /* 산뜻한 그린 */
+        --accent-color: #FF9800; /* 따뜻한 오렌지 */
+        --background-color: #F8F9FA; /* 밝은 회색 배경 */
+        --card-background: #FFFFFF; /* 카드 배경 */
+        --text-color: #333333; /* 기본 텍스트 색상 */
+        --heading-color: #0056B3; /* 헤딩 색상 */
+        --footer-color: #777777; /* 푸터 텍스트 색상 */
+        --hover-color: #0056b3; /* 호버 시 색상 */
+        --button-text-color: #FFFFFF;
+      }
+
+      body {
+        font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.7;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        scroll-behavior: smooth; /* 부드러운 스크롤 */
+      }
+      header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        padding: 2rem 1rem;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      }
+      header p {
+          font-size: 1.1rem;
+          margin-top: 0.5rem;
+          opacity: 0.9;
+      }
+      nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 1rem;
+        flex-wrap: wrap; /* 반응형 네비게이션 */
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+        position: relative;
+        padding-bottom: 5px;
+      }
+      nav a:hover {
+        color: var(--accent-color);
+        transform: translateY(-2px);
+      }
+      nav a::after { /* 밑줄 효과 */
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          display: block;
+          margin: auto;
+          background: var(--accent-color);
+          transition: width .5s ease;
+      }
+      nav a:hover::after {
+          width: 100%;
+      }
+
+      main {
+        max-width: 1200px; /* 콘텐츠 영역 확장 */
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+      }
+      section {
+        margin-bottom: 3rem;
+        background-color: var(--card-background);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      }
+      h2 {
+        color: var(--heading-color);
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 3px solid var(--secondary-color);
+        padding-bottom: 10px;
+        display: inline-block; /* border-bottom이 전체 너비를 차지하지 않도록 */
+      }
+      h3 {
+        color: var(--primary-color);
+        font-size: 1.6rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .subheading { /* 서브 헤딩 스타일 */
+        color: var(--primary-color);
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      /* K5 모델 정보 섹션 */
+      .model-card {
+          background-color: #E3F2FD; /* K5 관련 부드러운 파란색 */
+          border-radius: 10px;
+          padding: 1.5rem;
+          margin-bottom: 1.5rem;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          border-left: 5px solid var(--primary-color);
+      }
+      .model-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 118, 204, 0.2); /* 네이비 색상 그림자 */
+      }
+      .model-card h3 {
+          color: var(--primary-color);
+          margin-top: 0;
+      }
+      .model-card ul {
+          list-style: disc;
+          margin-left: 1.5rem;
+          padding-left: 0;
+      }
+      .model-card li {
+          margin-bottom: 0.5rem;
+      }
+      .model-card strong {
+          color: var(--heading-color);
+      }
+
+      /* 표 스타일 */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      th, td {
+        padding: 0.9rem 0.75rem;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+      }
+      thead th {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        font-weight: 700;
+        border-color: var(--primary-color);
+      }
+      tbody tr:nth-child(even) {
+        background-color: #f9f9f9; /* 차등 배경색 */
+      }
+      tbody tr:hover {
+        background-color: #e8f5e9; /* 호버 시 연한 녹색 */
+      }
+      .price-highlight {
+          font-weight: bold;
+          color: var(--accent-color);
+      }
+
+      /* 약어 설명 */
+      .abbr-section {
+          background-color: #FFF9C4; /* 연한 노란색 */
+          padding: 1.5rem;
+          border-radius: 8px;
+          margin-bottom: 2rem;
+          border-left: 5px solid #FBC02D; /* 진한 노란색 */
+      }
+      .abbr-section h3 {
+          color: #E65100; /* 진한 오렌지 */
+          margin-top: 0;
+      }
+      .abbr-section dt {
+          font-weight: 700;
+          color: var(--primary-color);
+          margin-bottom: 0.5rem;
+      }
+      .abbr-section dd {
+          margin-left: 1rem;
+          margin-bottom: 1rem;
+          color: var(--text-color);
+      }
+
+      /* CTA 버튼 */
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+        color: var(--button-text-color);
+        font-weight: 700;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        margin: 1.5rem 0;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+      }
+      .cta-button:hover {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 86, 179, 0.4);
+      }
+      .cta-button.secondary {
+          background: linear-gradient(135deg, #64B5F6, #00BCD4); /* 파랑/하늘색 */
+          box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+      }
+      .cta-button.secondary:hover {
+          background: linear-gradient(135deg, #00BCD4, #64B5F6);
+          box-shadow: 0 6px 20px rgba(41, 182, 247, 0.4);
+      }
+
+      /* 키워드 태그 */
+      .keyword-tags {
+        margin: 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+      }
+      .keyword-tags a {
+        background-color: #e1bee7; /* 연보라 */
+        color: #6A1B9A; /* 진보라 */
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 2px 5px rgba(106, 27, 154, 0.2);
+      }
+      .keyword-tags a:hover {
+        background-color: #ce93d8; /* 중간 보라 */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(106, 27, 154, 0.3);
+      }
+
+      /* 인용구 */
+      blockquote {
+        background-color: #ECEFF1; /* 연회색 */
+        border-left: 5px solid var(--primary-color);
+        padding: 1.5rem;
+        margin: 2rem 0;
+        font-style: italic;
+        color: #555;
+        border-radius: 0 8px 8px 0;
+      }
+      blockquote p {
+          margin: 0;
+      }
+      blockquote footer {
+          margin-top: 0.8rem;
+          font-weight: bold;
+          color: var(--heading-color);
+      }
+
+      /* FAQ 아코디언 */
+      .faq-section dl {
+          margin-top: 1rem;
+      }
+      .faq-section dt {
+        font-weight: 700;
+        margin-top: 1rem;
+        cursor: pointer;
+        color: var(--primary-color);
+        background-color: #E8F5E9; /* 연녹색 배경 */
+        padding: 12px 16px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+        position: relative;
+        border: 1px solid #C8E6C9; /* 진한 녹색 테두리 */
+      }
+      .faq-section dt::after {
+          content: '+'; /* 확장 전 기호 */
+          position: absolute;
+          right: 15px;
+          font-size: 1.4rem;
+          font-weight: bold;
+          color: var(--heading-color);
+          transition: transform 0.3s ease;
+      }
+      .faq-section dt.active {
+          background-color: #Dcedc8; /* 약간 더 진한 녹색 */
+          border-radius: 8px 8px 0 0; /* 위쪽만 둥글게 */
+      }
+      .faq-section dt.active::after {
+          content: '-'; /* 축소 시 기호 */
+          transform: rotate(0deg); /* 플러스 기호 자체를 마이너스로 변경 */
+      }
+      .faq-section dd {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 1rem;
+        background-color: var(--background-color); /* 배경과 통일 */
+        border: 1px solid #C8E6C9;
+        border-top: none; /* 상단 테두리 제거 */
+        border-radius: 0 0 8px 8px; /* 아래쪽만 둥글게 */
+        display: none; /* 기본적으로 숨김 */
+      }
+      .faq-section dl dt.active + dd {
+        display: block; /* 활성화 시 보이기 */
+      }
+
+      /* 입력란 스타일 */
+      .contact-form {
+          background-color: #f0f4f8; /* 연한 하늘색 배경 */
+          padding: 2rem;
+          border-radius: 10px;
+          box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+      }
+      .contact-form h3 {
+          color: var(--primary-color);
+          text-align: center;
+          margin-top: 0;
+          margin-bottom: 1.5rem;
+      }
+      .form-group {
+          margin-bottom: 1.5rem;
+      }
+      .form-group label {
+          display: block;
+          margin-bottom: 0.6rem;
+          font-weight: 600;
+          color: var(--heading-color);
+      }
+      .form-group input[type="text"],
+      .form-group input[type="email"],
+      .form-group input[type="tel"],
+      .form-group select,
+      .form-group textarea {
+          width: 100%;
+          padding: 0.8rem;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          box-sizing: border-box; /* 패딩 포함 너비 계산 */
+          font-size: 1rem;
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+          border-color: var(--primary-color);
+          box-shadow: 0 0 0 3px rgba(0, 118, 204, 0.2);
+          outline: none;
+      }
+      textarea {
+          min-height: 120px;
+          resize: vertical; /* 세로 크기 조절 가능 */
+      }
+
+      /* 외부 사이트 링크 */
+      .external-links {
+          text-align: center;
+          margin-top: 2rem;
+      }
+      .external-links h3 {
+          color: var(--heading-color);
+      }
+      .external-links ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          flex-wrap: wrap;
+      }
+      .external-links li a {
+          text-decoration: none;
+          color: var(--primary-color);
+          font-weight: 600;
+          padding: 8px 14px;
+          border-radius: 5px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+          display: inline-block;
+          border: 1px solid var(--primary-color);
+      }
+      .external-links li a:hover {
+          background-color: var(--primary-color);
+          color: white;
+      }
+
+      /* 그래프(이미지 대체) 및 표 */
+      .graph-placeholder {
+          text-align: center;
+          margin: 2rem 0;
+          padding: 1rem;
+          background-color: #eee;
+          border-radius: 8px;
+          border: 1px dashed #ccc;
+          color: #777;
+          font-style: italic;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+        color: var(--footer-color);
+        background-color: #e3e3e3;
+        margin-top: 3rem;
+      }
+
+      /* 반응형 조정 */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+        nav ul {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        nav a {
+            padding: 0.5rem;
+        }
+        main {
+          padding: 0 1rem;
+        }
+        section {
+          padding: 1.5rem;
+        }
+        h2 {
+          font-size: 1.7rem;
+        }
+        h3 {
+          font-size: 1.3rem;
+        }
+        .cta-button {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+        }
+        .model-card, .abbr-section, .contact-form {
+            padding: 1rem;
+        }
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>K5 자동차 리스 & 장기렌트카: 스마트한 선택, 현명한 유지비 관리 (2026년 최신 정보)</h1>
+        <p>부담 없는 월 납입금으로 최신 K5 모델을 소유하세요. 전문가 비교 견적 및 특별 프로모션 제공!</p>
+        <nav>
+            <ul>
+                <li><a href="#service-intro">서비스 소개</a></li>
+                <li><a href="#k5-models">K5 모델 알아보기</a></li>
+                <li><a href="#price-guide">가격 및 유지비 비교</a></li>
+                <li><a href="#lease-vs-rental">리스 vs 렌트</a></li>
+                <li><a href="#faq">자주 묻는 질문</a></li>
+                <li><a href="#contact">무료 견적 신청</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <section id="service-intro">
+            <h2>K5 리스/장기렌트카: 왜 특별한가요?</h2>
+            <p><strong>K5 자동차 리스</strong>와 <strong>장기렌트카</strong>는 차량 구매에 대한 새로운 패러다임을 제시합니다. 특히 대한민국 대표 세단인 K5를 최신 모델로 부담 없이 이용할 수 있는 기회는 많은 분들의 관심을 받고 있습니다. 2026년, 더욱 스마트해진 K5 모델들을 합리적인 <strong>유지비</strong>로 경험할 수 있도록, 저희 <strong>스마트카 파트너스</strong>는 전문적인 비교 분석과 맞춤형 컨설팅을 제공합니다.</p>
+            <p><strong>K5 유지비</strong> 절감 효과, 초기 비용 부담 감소, 원하는 기간만큼 신차 이용, 복잡한 서류 절차 간소화 등 리스 및 장기렌트카는 다양한 장점을 가지고 있습니다. <strong>개인사업자</strong> 및 <strong>법인</strong> 고객에게는 세금 혜택까지 제공되어 더욱 매력적인 선택지가 됩니다. <strong>AI</strong> 기술을 활용한 최적의 견적 산출과 <strong>Gemini</strong>, <strong>ChatGPT</strong>와 같은 도구를 통해 관련 정보를 탐색하시는 분들께도 명확하고 신뢰성 있는 정보를 제공하고자 합니다.</p>
+
+            <div class="keyword-tags" aria-label="연관 키워드">
+                <a href="#price-guide">K5 리스 가격</a>
+                <a href="#k5-models">K5 DL3</a>
+                <a href="#k5-models">K5 MX4</a>
+                <a href="#lease-vs-rental">K5 장기렌트카 장점</a>
+                <a href="#price-guide">K5 월 50만원대</a>
+                <a href="#faq">K5 신차 출고</a>
+                <a href="#contact">K5 견적 비교</a>
+                <a href="#lease-vs-rental">K5 자동차세</a>
+                <a href="#service-intro">K5 유지비 절감</a>
+                <a href="#price-guide">K5 프로모션</a>
+                <a href="#k5-models">K5 하이브리드</a>
+                <a href="#service-intro">합리적인 K5 선택</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="k5-models">
+            <h2>다양한 K5 모델 라인업 (2026년형 기준)</h2>
+            <p><strong>K5</strong>는 매력적인 디자인과 뛰어난 성능으로 꾸준히 사랑받는 중형 세단입니다. 2026년형 최신 모델들은 더욱 향상된 기술과 편의 사양을 갖추고 있습니다. 고객님의 라이프스타일에 맞는 최적의 K5 모델을 <strong>리스</strong> 또는 <strong>장기렌트카</strong>로 경험해 보세요.</p>
+
+            <div class="model-card">
+                <h3>K5 DL3 (2026년형)</h3>
+                <p><strong>[K5 DL3]</strong>은 역동적인 디자인과 첨단 기술이 조화를 이루는 모델입니다. 스포티한 주행 성능과 세련된 실내 공간을 자랑하며, 특히 <strong>K5 1.6 터보</strong> 엔진은 뛰어난 동력 성능과 효율성을 겸비하여 많은 인기를 얻고 있습니다. <strong>[K5 DL3 프레스티지]</strong> 트림은 합리적인 가격으로 K5의 매력을 충분히 느낄 수 있는 구성입니다. <strong>[K5 DL3 노블레스]</strong>, <strong>[K5 DL3 인스퍼레이션]</strong> 등 다양한 트림 선택지가 존재합니다.</p>
+                <ul>
+                    <li><strong>주요 특징:</strong> 날렵한 디자인, 최신 인포테인먼트 시스템, 다양한 운전자 보조 시스템</li>
+                    <li><strong>추천 대상:</strong> 세련된 디자인과 역동적인 주행을 선호하는 고객</li>
+                    <li><strong>관련 키워드:</strong> K5 DL3 가격, K5 DL3 견적, K5 1.6 터보 연비, K5 DL3 프로모션</li>
+                </ul>
+            </div>
+
+            <div class="model-card">
+                <h3>K5 MX4 (2026년형)</h3>
+                <p><strong>[K5 MX4]</strong>는 K5 DL3의 후속 또는 페이스리프트 모델로, 더욱 정제된 디자인과 개선된 사양을 특징으로 할 수 있습니다. (신규 모델명 가정) 만약 K5 MX4가 출시된다면, 이전 모델의 장점을 계승하면서도 사용자 경험을 극대화하는 방향으로 개발될 것입니다. <strong>[K5 MX4 2.0 가솔린]</strong> 엔진은 부드러운 주행 질감과 안정적인 성능을 제공하며, 일상 주행에 최적화되어 있습니다. <strong>[K5 MX4 시그니처]</strong>와 같은 고급 트림은 최상급 편의 사양을 제공합니다.</p>
+                <ul>
+                    <li><strong>주요 특징:</strong> 진화된 디자인 언어, 향상된 NVH 성능, 최첨단 스마트 커넥티비티</li>
+                    <li><strong>추천 대상:</strong> 최신 기술과 편안한 승차감을 중시하는 고객</li>
+                    <li><strong>관련 키워드:</strong> K5 MX4 연비, K5 MX4 장기렌트, K5 MX4 비교, K5 MX4 할인</li>
+                </ul>
+            </div>
+
+            <div class="model-card">
+                <h3>K5 하이브리드 (2026년형)</h3>
+                <p><strong>[K5 하이브리드]</strong> 모델은 친환경 트렌드에 발맞춘 최적의 선택입니다. <strong>K5 1.6 터보 하이브리드</strong> 시스템은 뛰어난 연비 효율을 자랑하며, 도심 주행 연비는 특히 인상적입니다. <strong>[K5 하이브리드 프레스티지]</strong>, <strong>[K5 하이브리드 노블레스]</strong> 트림은 하이브리드 특유의 정숙성과 경제성을 동시에 제공합니다. <strong>자동차세</strong> 절감 효과까지 고려하면 장기적으로 <strong>유지비</strong> 측면에서 매우 유리합니다.</p>
+                <ul>
+                    <li><strong>주요 특징:</strong> 탁월한 연비 효율, 조용하고 부드러운 주행, 친환경 운전 경험</li>
+                    <li><strong>추천 대상:</strong> 높은 연비 효율과 경제성, 친환경 운전을 중요하게 생각하는 고객</li>
+                    <li><strong>관련 키워드:</strong> K5 하이브리드 연비, K5 하이브리드 가격, K5 하이브리드 장기렌트, K5 하이브리드 세금</li>
+                </ul>
+            </div>
+
+             <div class="model-card">
+                <h3>K5 2.0 LPi (2026년형)</h3>
+                <p><strong>[K5 2.0 LPi]</strong> 모델은 경제적인 연료 비용을 중시하는 고객에게 적합합니다. LPG 연료를 사용하여 <strong>가솔린</strong> 모델 대비 연료비를 절감할 수 있으며, 특히 주행 거리가 많은 고객에게 유리합니다. <strong>[K5 LPi 프레스티지]</strong> 트림은 합리적인 가격으로 LPi 모델의 장점을 누릴 수 있게 합니다. <strong>내돈내산 후기</strong>를 찾아보면 많은 고객들이 연료비 절감 효과에 만족하고 있습니다.</p>
+                <ul>
+                    <li><strong>주요 특징:</strong> 저렴한 연료 비용, 안정적인 성능, 경제적인 운용</li>
+                    <li><strong>추천 대상:</strong> 높은 주행 거리와 경제적인 연료비를 우선하는 고객</li>
+                    <li><strong>관련 키워드:</strong> K5 LPi 가격, K5 LPi 연비, K5 LPi 장기렌트, K5 LPi 유지비</li>
+                </ul>
+            </div>
+
+            <p class="subheading">30개 이상 관련 모델명 키워드 (예시):</p>
+            <p>
+                K5 DL3 1.6 터보, K5 DL3 2.0 가솔린, K5 DL3 2.0 LPi, K5 DL3 하이브리드, K5 DL3 프레스티지, K5 DL3 노블레스, K5 DL3 인스퍼레이션, K5 MX4 1.6 터보, K5 MX4 2.0 가솔린, K5 MX4 2.0 LPi, K5 MX4 하이브리드, K5 MX4 시그니처, K5 MX4 익스클루시브, K5 2026년형, K5 신형, K5 풀체인지, K5 페이스리프트, K5 가솔린 리스, K5 하이브리드 장기렌트, K5 LPi 견적, K5 2024년식, K5 2025년식, K5 2026년식, K5 1세대, K5 2세대, K5 3세대, K5 4세대, K5 추천 트림, K5 가성비 모델, K5 법인차 리스, K5 개인사업자 렌트
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="price-guide">
+            <h2>K5 리스/장기렌트카 가격 및 유지비 비교 (2026년 전망)</h2>
+            <p><strong>K5 가격</strong>은 트림, 옵션, 계약 조건(기간, 주행거리, 보증금 등)에 따라 크게 달라집니다. <strong>자동차리스</strong>와 <strong>장기렌트카</strong>는 월 고정 지출을 예측 가능하게 하여 예산 관리에 도움을 줍니다. 2026년, 최신 K5 모델의 예상 월 납입금 및 <strong>유지비</strong> 관련 정보를 표로 정리했습니다.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>차량 모델 (예시)</th>
+                        <th>예상 월 납입금 (36개월, 보증금 30%)</th>
+                        <th>포함 내역 (장기렌트 기준)</th>
+                        <th>주요 유지비 항목</th>
+                        <th>비고 (2026년 정보)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>자동차 리스</strong></td>
+                        <td>K5 DL3 1.6T 프레스티지</td>
+                        <td><span class="price-highlight">580,000 원 ~</span></td>
+                        <td>차량 가액 (잔존가치 제외)</td>
+                        <td>월 리스료, 자동차세, 보험료 (개별 가입)</td>
+                        <td>신차 구매 대비 초기 비용 부담 적음, 세금 계산서 발급 가능</td>
+                    </tr>
+                    <tr>
+                        <td><strong>장기렌트카</strong></td>
+                        <td>K5 MX4 2.0 가솔린 노블레스</td>
+                        <td><span class="price-highlight">550,000 원 ~</span></td>
+                        <td>월 렌트료 (취등록세, 자동차세, 보험료 포함)</td>
+                        <td>월 렌트료 (모든 비용 포함)</td>
+                        <td>하이브리드 모델은 연비 효율성으로 장기적 <strong>유지비</strong> 절감 기대</td>
+                    </tr>
+                    <tr>
+                        <td><strong>장기렌트카</strong></td>
+                        <td>K5 하이브리드 프레스티지</td>
+                        <td><span class="price-highlight">620,000 원 ~</span></td>
+                        <td>월 렌트료 (취등록세, 자동차세, 보험료 포함)</td>
+                        <td>월 렌트료 (모든 비용 포함)</td>
+                        <td><strong>연간 자동차세</strong> 약 130~150만원 절감 효과 (가솔린 대비)</td>
+                    </tr>
+                     <tr>
+                        <td><strong>장기렌트카</strong></td>
+                        <td>K5 LPi 프레스티지</td>
+                        <td><span class="price-highlight">480,000 원 ~</span></td>
+                        <td>월 렌트료 (취등록세, 자동차세, 보험료 포함)</td>
+                        <td>월 렌트료 (모든 비용 포함)</td>
+                        <td><strong>LPG 유가</strong> 변동에 따른 <strong>유지비</strong> 영향, <strong>연료비</strong> 절감 효과 큼</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="note"><strong>참고:</strong> 위 예상 월 납입금은 2026년 기준 예상치이며, 실제 견적은 계약 시점, 프로모션, 고객 신용도, 계약 조건 등에 따라 달라질 수 있습니다. 정확한 <strong>K5 견적</strong>은 무료 상담을 통해 확인하세요.</p>
+
+            <div class="abbr-section">
+                <h3>주요 용어 및 유지비 상세 안내</h3>
+                <dl>
+                    <dt>리스료 (월):</dt>
+                    <dd>차량 가격에서 잔존가치를 제외한 금액을 계약 기간으로 나누어 산정됩니다. 자동차세, 보험료는 별도 납부하거나 포함 옵션 선택 가능 (장기렌트와 차이점).</dd>
+                    <dt>렌트료 (월):</dt>
+                    <dd>차량 가격, 취등록세, 자동차세, 보험료, 관리 비용 등이 모두 포함된 금액입니다. 추가 비용 발생이 적어 예산 관리가 용이합니다.</dd>
+                    <dt>자동차세:</dt>
+                    <dd>배기량에 따라 부과되며, K5 (1.6T, 2.0 가솔린) 기준 연 30만원 내외입니다. 하이브리드는 130~150만원 수준으로 감면 혜택이 있습니다. LPi는 가솔린과 유사하나, 친환경차 혜택은 별도 확인 필요.</dd>
+                    <dt>보험료:</dt>
+                    <dd>자동차 보험은 리스의 경우 개별적으로 가입해야 하며, 렌트카는 렌트 회사 명의로 종합보험에 가입되어 있어 추가 비용 부담이 적습니다. (개인 정보 활용 동의 필요)</dd>
+                    <dt>유류비:</dt>
+                    <dd>K5 모델별 연비 차이가 크므로, 주행 패턴에 맞는 모델 선택이 중요합니다. (예: K5 하이브리드 vs K5 1.6 터보)</dd>
+                    <dt>정비/소모품:</dt>
+                    <dd>장기렌트카는 주기적인 점검 및 소모품 교환이 렌트비에 포함되는 경우가 많아 편리합니다. 리스는 별도 관리 필요.</dd>
+                     <dt>보증금:</dt>
+                    <dd>월 납입금을 낮추기 위해 납입하는 금액으로, 계약 종료 시 반환되거나(조건부) 차량 인수 시 인수 비용으로 차감될 수 있습니다. 보증금 비율이 높을수록 월 납입금은 낮아집니다.</dd>
+                </dl>
+            </div>
+
+            <div class="graph-placeholder">
+                [그래프 이미지: K5 모델별 월 예상 납입금 및 예상 연간 유지비 비교 (2026년 기준)]
+                <p><em>AI 기반 예상 데이터 시각화 (실제 데이터는 견적 시 확인 필요)</em></p>
+            </div>
+            <p class="subheading">AI 분석 기반 K5 유지비 절감 팁:</p>
+            <p>
+                <strong>AI</strong> 및 <strong>ChatGPT</strong>와 같은 도구를 활용하여 K5 모델별 유류비, 자동차세, 보험료 등을 상세히 비교 분석할 수 있습니다. 예를 들어, 연간 주행 거리가 20,000km 이상이라면 <strong>K5 하이브리드</strong>나 <strong>K5 LPi</strong> 모델의 <strong>장기렌트카</strong> 상품이 <strong>유지비</strong> 측면에서 훨씬 유리할 수 있습니다. 또한, <strong>개인사업자</strong> 또는 <strong>법인</strong>이라면 법인 명의 리스/렌트를 통해 비용 처리 및 세금 감면 혜택을 극대화하는 전략이 필요합니다. <strong>네이버</strong>, <strong>구글</strong> 등 검색 엔진에서 'K5 리스 견적 비교', 'K5 장기렌트 최저가' 등을 검색하여 다양한 업체의 <strong>프로모션</strong>과 <strong>할인</strong> 정보를 비교해 보세요.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="lease-vs-rental">
+            <h2>K5 리스 vs 장기렌트카: 핵심 차이점 완벽 분석</h2>
+            <p><strong>K5 자동차 리스</strong>와 <strong>장기렌트카</strong>는 모두 새 차를 소유하는 것과 유사한 경험을 제공하지만, 중요한 차이점이 있습니다. 고객님의 상황에 맞는 최적의 선택을 위해 각 상품의 장단점과 차이점을 명확히 이해하는 것이 중요합니다.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>자동차 리스 (Lease)</th>
+                        <th>장기렌트카 (Rental)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>명의</strong></td>
+                        <td>리스 이용자 (개인/법인)</td>
+                        <td>렌트 회사</td>
+                    </tr>
+                    <tr>
+                        <td><strong>자동차 번호판</strong></td>
+                        <td>일반 (하얀색) 번호판</td>
+                        <td>렌터카 (하늘색) 번호판</td>
+                    </tr>
+                    <tr>
+                        <td><strong>월 비용</strong></td>
+                        <td>월 리스료 + 자동차세 + 보험료 (별도)</td>
+                        <td>월 렌트료 (취등록세, 자동차세, 보험료, 정비 포함)</td>
+                    </tr>
+                     <tr>
+                        <td><strong>초기 비용</strong></td>
+                        <td>보증금 (필수), 선수금 (선택)</td>
+                        <td>보증금 (선택), 선수금 (선택)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>세금 혜택</strong></td>
+                        <td><strong>개인사업자/법인</strong>: 경비 처리, 세금 계산서 발급 가능 (부가가치세 공제 가능)</td>
+                        <td><strong>개인사업자/법인</strong>: 경비 처리, 세금 계산서 발급 가능 (부가가치세 공제 가능)</td>
+                    </tr>
+                     <tr>
+                        <td><strong>보험</strong></td>
+                        <td>이용자 명의로 직접 가입 (보험료 할증 영향)</td>
+                        <td>렌트 회사 명의 종합보험 (이용자 정보로 보험료 산정, 사고 시 렌트사 통해 처리)</td>
+                    </tr>
+                     <tr>
+                        <td><strong>정비/관리</strong></td>
+                        <td>이용자 책임 (별도 관리 필요)</td>
+                        <td>포함 옵션 선택 시 정비/소모품 교환 지원 (편리)</td>
+                    </tr>
+                     <tr>
+                        <td><strong>자산 등재</strong></td>
+                        <td>재무제표상 부채 또는 리스 자산으로 등재 가능</td>
+                        <td>원칙적으로 자산/부채 미등재 (재무 건전성 유리)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>장점</strong></td>
+                        <td>일반 번호판, 보험료 할증 영향 적음, 차량 관리 주도권</td>
+                        <td>초기 비용 부담 적음, 월 고정 지출 예측 용이, 사고 처리 편리, 다양한 프로모션</td>
+                    </tr>
+                    <tr>
+                        <td><strong>단점</strong></td>
+                        <td>별도 관리 필요, 보험료/세금 부담, 일반인과 동등한 취급</td>
+                        <td>하늘색 번호판 (인식 차이), 사고 시 보험료 할증 부담(렌트사), 일부 제한적 차량 옵션</td>
+                    </tr>
+                    <tr>
+                        <td><strong>주요 추천 대상</strong></td>
+                        <td>개인 자산/신용 관리를 중시하는 분, 일반 번호판 선호, 직접 차량 관리 선호</td>
+                        <td>초기 비용 최소화, 월 고정 지출 관리 중시, 사업자 비용 처리, 사고 위험 부담 최소화 희망 고객</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="subheading"><strong>K5</strong> 모델에 대한 <strong>비교</strong> 및 <strong>차이점</strong> 상세 분석</p>
+            <p>
+                <strong>K5</strong>를 <strong>리스</strong>로 이용할 경우, 일반적인 자가용과 동일한 번호판을 사용하므로 차량 가치에 대한 심리적 만족도가 높을 수 있습니다. 또한, <strong>개인사업자</strong>나 <strong>법인</strong> 대표님이 <strong>자동차리스</strong>를 이용하면, 차량이 사업자 명의 또는 리스 회사 명의로 등록되어 경비 처리 및 세금 혜택(부가세 환급 등)을 받을 수 있으며, 이는 <strong>K5 유지비</strong>를 크게 절감하는 효과를 가져옵니다. <strong>AI</strong> 기반의 금융 상품 분석을 통해 최적의 리스 조건을 찾아보세요.
+            </p>
+            <p>
+                반면, <strong>K5 장기렌트카</strong>는 초기 비용 부담이 적고, 월 렌트료에 자동차세, 보험료, 정비비용까지 포함되는 경우가 많아 예산 관리가 매우 편리합니다. 특히 사고 발생 시에도 렌트 회사에서 종합보험으로 처리해주므로, 개인 보험료 할증에 대한 부담이 없습니다. <strong>K5 신규 가입 혜택</strong>이나 <strong>이벤트</strong>가 많은 편이며, <strong>저렴한 곳</strong>이나 <strong>싼 곳</strong>을 찾는다면 장기렌트카 시장을 중심으로 비교하는 것이 좋습니다. <strong>네이버</strong>, <strong>구글</strong>, <strong>유튜브</strong> 등에서 'K5 장기렌트카 비교', 'K5 리스 장단점' 등을 검색하면 관련 정보와 실제 이용자들의 <strong>후기</strong>를 쉽게 찾아볼 수 있습니다. <strong>Gemini</strong>나 <strong>ChatGPT</strong>에게도 이러한 비교 정보를 요청하여 도움을 받을 수 있습니다.
+            </p>
+            <blockquote>
+                <p>"K5 리스와 장기렌트카 중 어떤 것이 더 유리할지는 개인의 상황과 우선순위에 따라 달라집니다. 차량 가치, 번호판, 관리 방식, 세금 혜택, 사고 처리 등 다양한 요소를 종합적으로 고려하여 전문가와 상담 후 결정하는 것이 현명합니다."</p>
+                <footer>- 스마트카 파트너스 대표 컨설턴트</footer>
+            </blockquote>
+        </section>
+
+        <hr>
+
+        <section id="faq">
+            <h2>K5 리스/장기렌트카 관련 자주 묻는 질문 (FAQ)</h2>
+            <div class="faq-section">
+                <dl>
+                    <dt tabindex="0" aria-expanded="false">Q. K5 리스/렌트카 계약 기간은 어떻게 되나요?</dt>
+                    <dd>
+                        최소 12개월부터 최대 60개월까지 다양하게 선택 가능합니다. 일반적으로 계약 기간이 길어질수록 월 납입금은 낮아지는 경향이 있습니다. <strong>K5</strong> 모델별, 프로모션별로 최적의 계약 기간이 다를 수 있으니 상담 시 문의해 주세요.
+                    </dd>
+
+                    <dt tabindex="0" aria-expanded="false">Q. 보증금은 꼭 필요한가요? 보증금 비율에 따른 차이는?</dt>
+                    <dd>
+                        보증금은 월 납입금 부담을 줄이기 위한 선택 사항입니다. 보증금 비율이 높을수록 월 리스료/렌트료는 낮아집니다. 보증금 없는(무보증) 상품도 있지만, 월 납입금은 높아질 수 있습니다. <strong>K5</strong>의 경우, 일반적으로 10% ~ 50% 사이의 보증금 비율을 많이 선택합니다.
+                    </dd>
+
+                    <dt tabindex="0" aria-expanded="false">Q. 계약 종료 시 차량을 인수할 수 있나요?</p>
+                    <dd>
+                        네, 대부분의 <strong>K5 리스</strong> 및 <strong>장기렌트카</strong> 상품은 계약 종료 시 제공되는 '선수금' 또는 '잔존가치'를 기준으로 차량을 인수할 수 있는 옵션을 제공합니다. 인수 가격은 계약 시점에 미리 확정됩니다.
+                    </dd>
+
+                    <dt tabindex="0" aria-expanded="false">Q. K5 신규/중고차 구매와 비교했을 때 장점은 무엇인가요?</dt>
+                    <dd>
+                        <strong>장점</strong>으로는 초기 비용 부담 감소(취등록세, 부대 비용 포함/면제), 월 고정 지출 예측 용이, 차량 교체 주기 단축(신차 경험 용이), 사업자 세금 혜택 등이 있습니다. <strong>단점</strong>으로는 장기적으로는 차량을 소유하는 것보다 총 비용이 높아질 수 있으며, 계약 조건 변경이 어렵다는 점 등이 있습니다. <strong>AI</strong> 툴로 상세 비교 분석이 가능합니다.
+                    </dd>
+
+                    <dt tabindex="0" aria-expanded="false">Q. K5 리스/렌트카 이용 중 사고가 발생하면 어떻게 되나요?</dt>
+                    <dd>
+                        <strong>자동차 리스</strong>의 경우, 이용자 명의 보험으로 처리되어 보험료 할증의 영향을 받습니다. <strong>장기렌트카</strong>는 렌트 회사 명의 보험으로 처리되므로 이용자의 보험료 할증은 없으나, 렌트 회사 요율에 따라 보험료가 할증될 수 있습니다. 사고 접수 및 처리는 렌트 회사 또는 보험사를 통해 신속하게 진행됩니다.
+                    </dd>
+
+                     <dt tabindex="0" aria-expanded="false">Q. K5 리스/렌트카, 어디서 가장 저렴하게 이용할 수 있나요?</dt>
+                    <dd>
+                        <strong>K5</strong>의 <strong>가장 저렴한 곳</strong>을 찾기 위해서는 여러 업체의 <strong>견적</strong>을 비교하는 것이 필수입니다. 저희 <strong>스마트카 파트너스</strong>는 다년간의 노하우와 제휴 네트워크를 통해 경쟁력 있는 <strong>K5 리스</strong> 및 <strong>장기렌트카</strong> 상품을 제안합니다. <strong>네이버</strong>, <strong>구글</strong> 등에서 'K5 장기렌트카 비교 견적', 'K5 리스 최저가' 등을 검색하시고, 저희에게도 꼭 문의하여 최고의 <strong>할인</strong> 및 <strong>혜택</strong>을 확인해 보세요. <strong>신규 가입</strong> 시 특별 <strong>사은품</strong>이나 <strong>현금 지원</strong> 이벤트도 놓치지 마세요!
+                    </dd>
+
+                     <dt tabindex="0" aria-expanded="false">Q. K5 2026년형 최신 모델은 언제 계약 가능한가요?</dt>
+                    <dd>
+                        2026년형 K5 모델은 통상적으로 2025년 하반기 또는 2026년 초에 출시 및 계약이 시작될 것으로 예상됩니다. 정확한 출시 일정 및 사전 계약 <strong>프로모션</strong> 정보는 출시 시점에 맞춰 업데이트될 예정이니, 지속적인 관심 부탁드립니다. 사전 계약 시 특별 <strong>할인</strong> 혜택을 받을 수 있는 경우가 많습니다.
+                    </dd>
+                </dl>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h2>K5 리스/장기렌트카 무료 견적 신청</h2>
+            <p><strong>K5</strong> 모델에 대한 궁금증, 복잡한 비교 과정 이제 전문가에게 맡기세요! 고객님의 운전 습관, 예산, 선호하는 계약 조건 등을 고려하여 최적의 <strong>K5 자동차리스</strong> 또는 <strong>장기렌트카</strong> 상품을 맞춤 제안해 드립니다. 지금 바로 <strong>무료 견적</strong>을 신청하시고 합리적인 K5 라이프를 시작하세요!</p>
+
+            <div class="contact-form">
+                <h3>지금 바로 무료 견적 받기</h3>
+                <form action="#" method="post"> <!-- 실제 제출 시 action URL 변경 필요 -->
+                    <div class="form-group">
+                        <label for="name">성함</label>
+                        <input type="text" id="name" name="name" placeholder="홍길동" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">연락처</label>
+                        <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">선호 K5 모델</label>
+                        <select id="model" name="model" required>
+                            <option value="">-- 모델 선택 --</option>
+                            <option value="K5 DL3 1.6T">K5 DL3 1.6 터보 (프레스티지)</option>
+                            <option value="K5 DL3 2.0G">K5 DL3 2.0 가솔린 (노블레스)</option>
+                            <option value="K5 DL3 LPi">K5 DL3 2.0 LPi (프레스티지)</option>
+                            <option value="K5 DL3 Hybrid">K5 DL3 하이브리드 (프레스티지)</option>
+                            <option value="K5 MX4 1.6T">K5 MX4 1.6 터보 (예상)</option>
+                            <option value="K5 MX4 2.0G">K5 MX4 2.0 가솔린 (예상)</option>
+                            <option value="K5 MX4 Hybrid">K5 MX4 하이브리드 (예상)</option>
+                            <option value="Other">기타 (상담 시 논의)</option>
+                        </select>
+                    </div>
+                     <div class="form-group">
+                        <label for="contract-type">계약 형태</label>
+                        <select id="contract-type" name="contract-type" required>
+                            <option value="">-- 선택 --</option>
+                            <option value="Lease">자동차 리스</option>
+                            <option value="LongTermRental">장기 렌트카</option>
+                            <option value="Undecided">아직 결정 못함 (상담 희망)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="term">계약 기간 (개월)</label>
+                        <input type="number" id="term" name="term" placeholder="예: 36" min="12" max="60" step="6">
+                    </div>
+                     <div class="form-group">
+                        <label for="mileage">연 예상 주행거리 (km)</label>
+                        <input type="number" id="mileage" name="mileage" placeholder="예: 20000" min="10000" max="30000" step="5000">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">추가 문의사항 (선택)</label>
+                        <textarea id="message" name="message" placeholder="궁금하신 점이나 요청사항을 자유롭게 작성해주세요. (예: K5 프로모션, 사업자 혜택 문의 등)"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button secondary">무료 견적 신청 제출</button>
+                </form>
+            </div>
+             <p class="subheading">AI 및 전문가 상담으로 최적의 K5 찾기</p>
+             <p>
+                 <strong>Gemini</strong>나 <strong>ChatGPT</strong>와 같은 <strong>AI</strong> 챗봇을 활용하여 K5 리스/렌트카 관련 기본적인 정보를 얻을 수 있지만, 개인 맞춤형 최적의 조건을 찾기 위해서는 실제 전문가와의 상담이 필수적입니다. 저희 <strong>스마트카 파트너스</strong>는 고객님의 데이터와 최신 시장 정보를 종합적으로 분석하여 가장 합리적인 <strong>K5 가격</strong> 및 <strong>유지비</strong> 조건을 찾아드립니다. 지금 바로 문의하여 K5 오너가 되는 가장 스마트한 길을 경험하세요!
+             </p>
+        </section>
+
+        <section class="external-links" aria-label="신뢰할 수 있는 외부 정보">
+            <h3>K5 및 자동차 금융 정보 (참고 자료)</h3>
+            <ul>
+                <li><a href="https://www.kia.com/kr/vehicles/k5/features.html" target="_blank" rel="noopener noreferrer">기아 K5 공식 소개</a></li>
+                <li><a href="https://namu.wiki/w/기아 K5" target="_blank" rel="noopener noreferrer">나무위키: K5</a></li>
+                <li><a href="https://www.nts.go.kr/renewal_2020/nm/support/support_02.asp" target="_blank" rel="noopener noreferrer">국세청 자동차세 안내</a></li>
+                <li><a href="https://www.korea.kr/news/policyBriefingView.do?newsId=156544737" target="_blank" rel="noopener noreferrer">정부 정책 브리핑 (친환경차 지원 정보 등)</a></li>
+                <li><a href="https://www.kcar.com/CX/Guide/LeaseGuide" target="_blank" rel="noopener noreferrer">케이카 자동차 리스 가이드</a></li>
+                <li><a href="https://www.fss.or.kr/fss/bbs/B0000189/view.do?nttId=109562&menuNo=200217&pageIndex=1" target="_blank" rel="noopener noreferrer">금융감독원 금융소비자정보 (리스/렌트 주의사항)</a></li>
+            </ul>
+        </section>
+
     </main>
-  </body>
-</html>
+
+    <script>
+      // FAQ 아코디언 기능 (접기/펼치기)
+      document.querySelectorAll('dl dt').forEach((dt) => {
+        dt.addEventListener('click', () => {
+          const isActive = dt.classList.toggle('active');
+          dt.setAttribute('aria-expanded', isActive);
+
+          // Rotate the plus/minus icon
+          const icon = dt.querySelector('::after'); // This pseudo-element selector won't work directly here
+          // Instead, we rely on CSS ::after content change triggered by .active class
+        });
+
+        // Keyboard accessibility
+        dt.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            dt.click();
+          }
+        });
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+  
